@@ -5,6 +5,7 @@
 
 * {
   box-sizing: border-box;
+  user-select: none;
 }
 
 html, body {
@@ -19,6 +20,7 @@ html, body {
 }
 
 .p1 {
+  background-color: #0004FF;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,7 +37,6 @@ html, body {
 
 .arrow-container {
   margin-top: 20px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,28 +130,116 @@ html, body {
 }
 
 .projects-section {
-  background-color: white;
+  background-color: #f2f2f2;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   font-size: 24px;
   font-family: Poppins, sans-serif;
+}
+
+.projects-section p {
+  margin-top: 20px;
+  margin-left: 20px;
+  color: #FFFB00;
+  background-color: #000;
+  padding: 0 10px;
 }
 
 .go-back-button {
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #FFFB00;
-  color: #000;
+  background-color: #000000;
+  color: #FFFB00;
   padding: 7px 13px 10px 13px;
   font-size: 14px;
   border: none;
-  cursor: pointer;
   font-family: Poppins, sans-serif;
   transition: background-color 0.3s ease;
 }
 
 .go-back-button:hover {
   background-color: #fff500;
+}
+
+.projects-showcase {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  width: calc(50vw - 30px);
+  height: 350px;
+  background-color: #000000;
+  color: #FFFB00;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s; /* Optional: adds a hover effect to the card */
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin: 0;
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  color: #FFFB00;
+  font-family: poppins;
+  font-weight: normal;
+}
+
+.view-project-button {
+  color: white;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  top: 28px;
+  right: 30px;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* Initially hide the text container */
+}
+
+.text-container input {
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  width: 105px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #FFFB00;
+  color: #000;
+  outline: none;
+}
+
+.text-container input::placeholder {
+  color: #000;
+}
+
+.text-container input:focus {
+  background-color: #FFFB00;
+}
+
+.text-container button {
+  background-color: #0004FF;
+  color: #FFFB00;
+  border: none;
+  padding: 4.8px 10px 6.25px 10px;
+  font-size: 17px;
+}
+
+.project-card:hover .text-container {
+  display: flex;
 }

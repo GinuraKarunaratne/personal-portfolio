@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
 
 function App() {
@@ -83,10 +84,10 @@ function App() {
 
           <div className='email-container'>
             <form onSubmit={validateEmail}>
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                value={email} 
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button type="submit">→</button>
@@ -97,7 +98,53 @@ function App() {
 
       <div id="projects-section" className="projects-section">
         <button className="go-back-button" onClick={scrollToTop}>↑</button>
-        <p>This is the projects section</p>
+        <p>Project Showcase</p>
+
+        {/* Flexbox container for project cards */}
+        <div className="projects-showcase">
+          <div className="project-card">
+            <h3>Modern ATM UI Design</h3>
+            <a href='https://www.figma.com/community/file/1295988419710742075/atm-ui-design-animated' className="view-project-button">
+              <i className="fab fa-figma"></i>
+            </a>
+
+            <div className='text-container'>
+              <form onSubmit={(e) => { e.preventDefault(); window.location.href = 'https://www.figma.com/community/file/1295988419710742075/atm-ui-design-animated'; }}>
+                <input
+                  type="email"
+                  placeholder="View Project"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  readOnly // Make the input field read-only
+                />
+                <button type="submit">→</button>
+              </form>
+
+            </div>
+
+          </div>
+          <div className="project-card">
+            <h3>Modern Taxi Booking System UI</h3>
+            <a href='https://www.figma.com/community/file/1322540885974936456/modern-taxi-booking-system-ui' className="view-project-button">
+              <i className="fab fa-figma"></i>
+            </a>
+
+            <div className='text-container'>
+              <form onSubmit={(e) => { e.preventDefault(); window.location.href = 'https://www.figma.com/community/file/1322540885974936456/modern-taxi-booking-system-ui'; }}>
+                <input
+                  type="email"
+                  placeholder="View Project"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  readOnly // Make the input field read-only
+                />
+                <button type="submit">→</button>
+              </form>
+
+            </div>
+            
+          </div>
+        </div>
 
         <div
           className="custom-cursor"
