@@ -4,6 +4,8 @@ import './App.css';
 function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(true);
+  const [email, setEmail] = useState('');
+  const [isValidEmail, setIsValidEmail] = useState(false);
 
   useEffect(() => {
     let timeoutId;
@@ -20,18 +22,44 @@ function App() {
 
     window.addEventListener('mousemove', handleMouseMove);
 
+    // Disable scroll on mount
+    document.body.style.overflow = 'hidden';
+
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       clearTimeout(timeoutId);
+      // Re-enable scroll on unmount
+      document.body.style.overflow = 'auto';
     };
   }, []);
 
+  const validateEmail = (e) => {
+    e.preventDefault();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailRegex.test(email)) {
+      setIsValidEmail(true);
+      window.location.href = `mailto:iamginurakarunaratne@gmail.com?subject=Contact&body=Email: ${email}`;
+    } else {
+      setIsValidEmail(false);
+      alert('Please enter a valid email.');
+    }
+  };
+
+  const scrollToProjects = () => {
+    document.getElementById('projects-section').scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
+
+  const scrollToTop = () => {
+    document.getElementById('top-section').scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
-      <div className='p1'>
-        <h1>Ginura Karunaratne</h1>
-      </div>
-
       <div
         className="custom-cursor"
         style={{
@@ -40,6 +68,47 @@ function App() {
           opacity: isVisible ? 1 : 0,
         }}
       ></div>
+
+      <div id="top-section" className='p1'>
+        <h1>Ginura Karunaratne</h1>
+        <div className="arrow-container" onClick={scrollToProjects}>
+          <span className="view-projects-text">View Projects</span>
+          <span className="arrow">↓</span>
+        </div>
+
+        <div className='btm-line'>
+          <a id='tags' href="https://github.com/GinuraKarunaratne">GitHub</a>
+          <a id='tags' href="https://linkedin.com/in/ginurakarunaratne">LinkedIn</a>
+          <a id='tags' href="https://instagram.com/ginurakarunaratne">Instagram</a>
+
+          <div className='email-container'>
+            <form onSubmit={validateEmail}>
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button type="submit">→</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="projects-section" className="projects-section">
+        <button className="go-back-button" onClick={scrollToTop}>↑</button>
+        <p>This is the projects section</p>
+
+        <div
+          className="custom-cursor"
+          style={{
+            top: `${position.y}px`,
+            left: `${position.x}px`,
+            opacity: isVisible ? 1 : 0,
+          }}
+        ></div>
+      </div>
+
     </>
   );
 }
