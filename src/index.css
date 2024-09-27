@@ -7,8 +7,8 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    border-radius: 50%;
     background-color: white;
+    border-radius: 50%;
     pointer-events: none;
     mix-blend-mode: difference;
     transform: translate(-50%, -50%);

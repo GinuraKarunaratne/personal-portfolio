@@ -11,7 +11,6 @@
 html, body {
   margin: 0;
   font-family: Poppins, sans-serif;
-  overflow: hidden;
 }
 
 .p1, .projects-section {
@@ -136,6 +135,8 @@ html, body {
   align-items: flex-start;
   font-size: 24px;
   font-family: Poppins, sans-serif;
+  height: 100vh; /* Ensure full height for the section */
+  overflow: hidden; /* Hide any scrolling for the entire section */
 }
 
 .projects-section p {
@@ -159,10 +160,7 @@ html, body {
   transition: background-color 0.3s ease;
 }
 
-.go-back-button:hover {
-  background-color: #fff500;
-}
-
+/* Projects showcase with separate scroll */
 .projects-showcase {
   display: flex;
   flex-direction: row;
@@ -170,7 +168,10 @@ html, body {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
+  margin-top: 20px;
+  padding: 0 20px 20px 20px;
+  height: calc(100vh - 100px);
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .project-card {
@@ -183,7 +184,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s; /* Optional: adds a hover effect to the card */
+  transition: transform 0.2s;
 }
 
 .project-card h3 {
@@ -195,6 +196,19 @@ html, body {
   color: #FFFB00;
   font-family: poppins;
   font-weight: normal;
+}
+
+.project-card h5 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #FFFB00;
+  font-family: Silkscreen;
+  font-weight: normal;
+  font-size: 20px;
 }
 
 .view-project-button {
@@ -242,4 +256,8 @@ html, body {
 
 .project-card:hover .text-container {
   display: flex;
+}
+
+.projects-showcase::-webkit-scrollbar {
+  width: 0;
 }
