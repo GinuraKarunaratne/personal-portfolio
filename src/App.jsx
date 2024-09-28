@@ -204,6 +204,39 @@ function App() {
               </form>
             </div>
           </div>
+
+          <div className="project-card">
+            <h3>Photography Showcase & Upload Website</h3>
+
+            <h5>2023</h5>
+
+            <a
+              href="https://github.com/GinuraKarunaratne/photo-showcase-site"
+              className="view-project-button"
+            >
+              <i className="fab fa-html5"></i>
+            </a>
+
+            <div className="text-container">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  window.location.href =
+                    "https://github.com/GinuraKarunaratne/photo-showcase-site";
+                }}
+              >
+                <input
+                  type="email"
+                  placeholder="View Project"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  readOnly // Make the input field read-only
+                />
+                <button type="submit">→</button>
+              </form>
+            </div>
+          </div>
+
         </div>
 
         <div
