@@ -1,4 +1,7 @@
-<svg width="1890" height="1890" viewBox="0 0 1890 1890" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 1890C0 846.182 846.182 0 1890 0V0V0C1890 1043.82 1043.82 1890 0 1890V1890V1890Z" fill="#0004FF"/>
-<path d="M153 1272.18C153 858.492 653.426 651.534 946.5 943.5V943.5V943.5C1238.47 1236.57 1031.51 1737 617.821 1737V1737C361.108 1737 153 1528.89 153 1272.18V1272.18Z" fill="#FFFB00"/>
+<svg width="152" height="183" viewBox="0 0 152 183" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="30.2" height="151" transform="translate(0.0809937 31.9424)" fill="#EB5E28"/>
+<rect width="30.2" height="151" transform="translate(30.281 24.1777)" fill="#252422"/>
+<rect width="30.2" height="151" transform="translate(60.481 16.3613)" fill="#CCC5B9"/>
+<rect width="30.2" height="151" transform="translate(90.681 8.54492)" fill="#403D39"/>
+<rect width="30.2" height="151" transform="translate(120.881 0.728516)" fill="#FFFCF2"/>
 </svg>

@@ -13,7 +13,7 @@ html, body {
   font-family: Poppins, sans-serif;
 }
 
-.p1, .projects-section {
+.p1, .projects-section, .academics-section {
   position: relative;
   height: 100vh;
 }
@@ -123,7 +123,7 @@ html, body {
   background-color: #0004FF;
   color: #FFFB00;
   border: none;
-  padding: 5px 10px;
+  padding: 7px 10px;
   font-size: 14px;
   transition: background-color 0.3s ease;
 }
@@ -154,6 +154,19 @@ html, body {
   background-color: #000000;
   color: #FFFB00;
   padding: 7px 13px 10px 13px;
+  font-size: 14px;
+  border: none;
+  font-family: Poppins, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.academics-button {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  background-color: #0004FF;
+  color: #FFFB00;
+  padding: 8.5px 13px 8.5px 13px;
   font-size: 14px;
   border: none;
   font-family: Poppins, sans-serif;
@@ -260,4 +273,20 @@ html, body {
 
 .projects-showcase::-webkit-scrollbar {
   width: 0;
+}
+
+.academics-section {
+  background-color: #0004FF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 24px;
+  font-family: Poppins, sans-serif;
+  height: 100vh; /* Ensure full height for the section */
+  overflow: hidden; /* Hide any scrolling for the entire section */
+}
+
+.academics-section .go-back-button{
+  background-color: #FFFB00;
+  color: #000;
 }

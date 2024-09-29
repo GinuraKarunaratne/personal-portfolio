@@ -1,4 +1,5 @@
 *{
+    height: max-content;
     margin: 0;
     cursor: none;
 }
@@ -7,7 +8,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    background-color: white;
+    background-color: #252422;
     border-radius: 50%;
     pointer-events: none;
     mix-blend-mode: difference;

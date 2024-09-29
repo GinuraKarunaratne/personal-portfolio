@@ -47,6 +47,12 @@ function App() {
     }
   };
 
+  const scrollToProjects2 = () => {
+    document.getElementById("projects-section2").scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   const scrollToProjects = () => {
     document.getElementById("projects-section").scrollIntoView({
       behavior: "smooth",
@@ -105,6 +111,9 @@ function App() {
       <div id="projects-section" className="projects-section">
         <button className="go-back-button" onClick={scrollToTop}>
           ↑
+        </button>
+        <button className="academics-button" onClick={scrollToProjects2}>
+          View Academics
         </button>
         <p>Project Showcase</p>
 
@@ -248,6 +257,24 @@ function App() {
           }}
         ></div>
       </div>
+
+      <div id="projects-section2" className="academics-section">
+        <button className="go-back-button" onClick={scrollToProjects}>
+          ↑
+        </button>
+
+        
+
+        <div
+          className="custom-cursor"
+          style={{
+            top: `${position.y}px`,
+            left: `${position.x}px`,
+            opacity: isVisible ? 1 : 0,
+          }}
+        ></div>
+      </div>
+
     </>
   );
 }
