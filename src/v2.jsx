@@ -261,7 +261,64 @@ function App() {
                 <h1 className="academics-h">Personal Timeline</h1>
 
                 <div className="academic-content" id="academic-content">
-                    
+                    <ul className="timeline">
+                        <li className="timeline-event">
+                            <label className="timeline-event-icon"></label>
+                            <div className="timeline-event-copy">
+                                <p className="timeline-event-thumbnail">2024 - Present</p>
+                                <h3>BEng (Hons) Software Engineering</h3>
+                                <h4>Ofqual Level 6, APIIT - (University of Staffordshire) (Reading)</h4>
+                            </div>
+                        </li>
+                        <li className="timeline-event">
+                            <label className="timeline-event-icon"></label>
+                            <div className="timeline-event-copy">
+                                <p className="timeline-event-thumbnail">2024 - 2025</p>
+                                <h3>ABE UK - Diploma in Business Management</h3>
+                                <h4>Ofqual Level 6, Business Management, ABE UK (Reading)</h4>
+                            </div>
+                        </li>
+                        <li className="timeline-event">
+                            <label className="timeline-event-icon"></label>
+                            <div className="timeline-event-copy">
+                                <p className="timeline-event-thumbnail">2022 - 2024</p>
+                                <h3>PEARSON BTEC HIGHER NATIONAL DIPLOMA (HND) SOFTWARE ENGINEERING</h3>
+                                <h4>Ofqual Level 5, ESOFT Metro Campus (July 2024) - Graduated with 9 Distinctions</h4>
+                            </div>
+                        </li>
+                        <li className="timeline-event">
+                            <label className="timeline-event-icon"></label>
+                            <div className="timeline-event-copy">
+                                <p className="timeline-event-thumbnail">2023 - 2024</p>
+                                <h3>ABE UK - Diploma in Business Management</h3>
+                                <h4>Ofqual Level 5, Business Management, ABE UK (Reading)</h4>
+                            </div>
+                        </li>
+                        <li className="timeline-event">
+                            <label className="timeline-event-icon"></label>
+                            <div className="timeline-event-copy">
+                                <p className="timeline-event-thumbnail">2021 - 2022</p>
+                                <h3>DIPLOMA IN SOFTWARE ENGINEERING (DISE)</h3>
+                                <h4>Software Engineering, ESOFT Metro Campus (June 2022)</h4>
+                            </div>
+                        </li>   
+                        <li className="timeline-event">
+                            <label className="timeline-event-icon"></label>
+                            <div className="timeline-event-copy">
+                                <p className="timeline-event-thumbnail">2020</p>
+                                <h3>GCE O/levels Completed</h3>
+                                <h4>Private Candidate (2020/2021)</h4>
+                            </div>
+                        </li>
+                        <li className="timeline-event">
+                            <label className="timeline-event-icon"></label>
+                            <div className="timeline-event-copy">
+                                <p className="timeline-event-thumbnail">2009 - 2020</p>
+                                <h3>Lyceum International School</h3>
+                                <h4>Private Candidate (2020/2021)</h4>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
                 <div

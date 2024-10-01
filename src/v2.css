@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Syne:wght@400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -294,16 +295,14 @@ body {
 
 .academics-section {
     width: 100vw;
-    background-color: #FFFCF2;
+    background-color: #CCC5B9;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-size: 24px;
     font-family: Poppins, sans-serif;
     height: 100vh;
-    /* Ensure full height for the section */
     overflow: hidden;
-    /* Hide any scrolling for the entire section */
 }
 
 .academics-section .acad-back-button {
@@ -325,14 +324,101 @@ body {
     bottom: 30px;
     right: 40px;
     color: #252422;
-    font-family: syne;
+    font-family: Syne, sans-serif;
 }
 
 .academic-content {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100vw;
-    height: 85vh; /* Ensure the height is set */
-    background-color: transparent;
+    height: 85vh;
+    background-color: #FFFCF2;
     position: relative;
+    overflow-y: auto;
+}
+
+/* Timeline Styling */
+.timeline {
+    margin: 4em 100px 0 100px;
+    position: relative;
+    max-width: 1200px;
+}
+
+.timeline:before {
+    background-color: #252422;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 32px; /* 2em converted to px */
+    width: 2px;
+    height: 100%; /* Let it expand based on content */
+}
+
+.timeline-event {
+    list-style: none;
+    position: relative;
+    margin-bottom: 2em; /* Ensures space between events */
+}
+
+.timeline-event:hover .timeline-event-icon {
+    transform: rotate(-45deg);
+    background-color: #EB5E28;
+}
+
+.timeline-event:hover .timeline-event-thumbnail {
+    box-shadow: inset 640px 0 0 0 #EB5E28; /* Adjusted based on 40em */
+}
+
+.timeline-event-copy {
+    padding: 32px; /* 2em converted to px */
+    position: relative;
+    top: -30px; /* -1.875em converted to px */
+    left: 30px; /* 4em converted to px */
+    width: 80%;
+}
+
+.timeline-event-copy h3 {
+    font-family: poppins;
+    font-size: 28px; /* Reduced font size from 1.75em */
+}
+
+.timeline-event-copy h4 {
+    font-family: lexend deca;
+    font-weight: 300;
+    font-size: 18px; /* Reduced font size from 1.2em */
+    margin-bottom: 18px; /* 1.2em converted to px */
+}
+
+.timeline-event-copy p:not(.timeline-event-thumbnail) {
+    padding-bottom: 18px; /* 1.2em converted to px */
+}
+
+.timeline-event-icon {
+    transition: transform 0.2s ease-in;
+    transform: rotate(45deg);
+    background-color: #CCC5B9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin: 16px 8px 8px -14.5px;
+}
+
+.timeline-event-thumbnail {
+    transition: box-shadow 0.3s ease-in 0.1s;
+    color: #FFFCF2;
+    font-size: 12px;
+    background-color: #252422;
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 4px 12px;
+    box-shadow: inset 0 0 0 0px #ef795a;
+    font-family: poppins;
+}
+
+.academic-content::-webkit-scrollbar {
+    width: 0;
 }
