@@ -16,3 +16,11 @@
     z-index: 9999;
     transition: opacity 0.3s ease;
   }
+
+  @media (max-width: 768px) {
+
+    .custom-cursor {
+      display: none;
+    }
+
+  }

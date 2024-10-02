@@ -419,15 +419,21 @@ body {
         /* Smaller font size for text */
     }
 
+    .project-card h3 {
+        word-break: break-word;
+        word-wrap: break-word;
+        max-width: 220px;
+    }
+
     .text-container input {
-        width: 95px;
+        width: 80px;
         /* Smaller input width */
         font-size: 12px;
         /* Smaller font size for input */
     }
 
     .text-container button {
-        font-size: 16px;
+        font-size: 14px;
         /* Smaller button font size */
     }
 }
