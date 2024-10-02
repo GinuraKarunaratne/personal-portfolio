@@ -13,6 +13,7 @@ html,
 body {
     margin: 0;
     font-family: Poppins, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .p1,
@@ -143,6 +144,66 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/*p1 Responsive Design*/
+
+@media (max-width: 768px) {
+    .p1 {
+        padding: 20px; /* Add some padding for better spacing */
+    }
+
+    .p1 h1 {
+        font-size: 50px; /* Reduce font size for h1 */
+    }
+
+    .arrow-container {
+        flex-direction: column;
+        margin-left: 0; /* Center arrow container */
+        justify-content: center; /* Center items in the flexbox */
+        margin-top: 15px; /* Maintain top margin */
+        gap: 2px;
+    }
+
+    .arrow {
+        rotate: 360deg; /* Rotate arrow downwards */
+        font-size: 30px; /* Maintain arrow font size */
+        animation: bounce 2s infinite; /* Keep bounce animation */
+        margin-bottom: 3px;
+    }
+
+    .view-projects-text {
+        font-size: 14px; /* Reduce font size for the view projects text */
+        margin-bottom: 5px; /* Maintain bottom margin */
+    }
+
+    .btm-line {
+        flex-direction: row; /* Change layout to column */
+        align-items: center; /* Center items */
+        justify-content: center; /* Center items */
+        width: 100%; /* Full width */
+    }
+
+    #tags{
+        font-size: 12px;
+    }
+
+
+    .email-container {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        scale: 0.8;
+        position: fixed; 
+        top: 30px;
+        left: 45%;
+        transform: translateX(-50%);
+    }
+
+    .email-container input {
+        background-color: #CCC5B9;
+    }
+    
+}
+
 .projects-section {
     background-color: #FFFCF2;
     display: flex;
@@ -202,20 +263,24 @@ body {
     padding: 0 20px 20px 20px;
     height: calc(100vh - 100px);
     overflow-y: auto;
-    /* Enable vertical scrolling */
+    scroll-behavior: smooth;
 }
 
 .project-card {
     width: calc(50vw - 30px);
     height: 350px;
-    background-color: #CCC5B9;
+    background-color: #ccc5b979;
     color: #CCC5B9;
     padding: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(0.985);
 }
 
 .project-card h3 {
@@ -337,6 +402,7 @@ body {
     background-color: #FFFCF2;
     position: relative;
     overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 /* Timeline Styling */
@@ -363,8 +429,8 @@ body {
 }
 
 .timeline-event:hover .timeline-event-icon {
-    transform: rotate(-45deg);
     background-color: #EB5E28;
+    width: 30px;
 }
 
 .timeline-event:hover .timeline-event-thumbnail {
@@ -382,11 +448,13 @@ body {
 .timeline-event-copy h3 {
     font-family: poppins;
     font-size: 28px; /* Reduced font size from 1.75em */
+    color: #252422;
 }
 
 .timeline-event-copy h4 {
     font-family: lexend deca;
     font-weight: 300;
+    color: #403d39;
     font-size: 18px; /* Reduced font size from 1.2em */
     margin-bottom: 18px; /* 1.2em converted to px */
 }
@@ -396,8 +464,7 @@ body {
 }
 
 .timeline-event-icon {
-    transition: transform 0.2s ease-in;
-    transform: rotate(45deg);
+    transition: background-color 0.3s ease-in-out, width 0.3s ease-in-out;
     background-color: #CCC5B9;
     position: absolute;
     top: 0;
@@ -421,4 +488,24 @@ body {
 
 .academic-content::-webkit-scrollbar {
     width: 0;
+}
+
+.linkedin {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: #EB5E28;
+    color: #FFFCF2;
+    padding: 8.5px 13px;
+    font-size: 14px;
+    border: none;
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+    color: #FFFCF2;
+    transition: background-color 0.3s ease;
+}
+
+.linkedin a{
+    text-decoration: none;
+    color: #FFFCF2;
 }

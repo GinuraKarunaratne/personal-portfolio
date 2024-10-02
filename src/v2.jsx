@@ -113,7 +113,7 @@ function App() {
                     ↑
                 </button>
                 <button className="academics-button" onClick={scrollToProjects2}>
-                    Explore More
+                    Personal Timeline
                 </button>
                 <p>Project Showcase</p>
 
@@ -315,10 +315,21 @@ function App() {
                             <div className="timeline-event-copy">
                                 <p className="timeline-event-thumbnail">2009 - 2020</p>
                                 <h3>Lyceum International School</h3>
-                                <h4>Private Candidate (2020/2021)</h4>
+                                <h4>Primary & Secondary Education</h4>
+                            </div>
+                        </li>
+                        <li className="timeline-event">
+                            <label className="timeline-event-icon"></label>
+                            <div className="timeline-event-copy">
+                                <p className="timeline-event-thumbnail">2006</p>
+                                <h3>Wild Human Appeared</h3>
+                                <h4>Just spawned on Earth</h4>
                             </div>
                         </li>
                     </ul>
+
+                    <button className="linkedin"><a href="https://linkedin.com/in/ginurakarunaratne">Access Linkedin</a></button>
+
                 </div>
 
                 <div
