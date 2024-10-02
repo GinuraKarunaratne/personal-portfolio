@@ -148,60 +148,62 @@ body {
 
 @media (max-width: 768px) {
     .p1 {
-        padding: 20px; /* Add some padding for better spacing */
+        padding: 20px;
+        /* Add some padding for better spacing */
     }
 
     .p1 h1 {
-        font-size: 50px; /* Reduce font size for h1 */
+        font-size: 50px;
+        /* Reduce font size for h1 */
     }
 
     .arrow-container {
         flex-direction: column;
-        margin-left: 0; /* Center arrow container */
-        justify-content: center; /* Center items in the flexbox */
-        margin-top: 15px; /* Maintain top margin */
+        margin-left: 0;
+        /* Center arrow container */
+        justify-content: center;
+        /* Center items in the flexbox */
+        margin-top: 15px;
+        /* Maintain top margin */
         gap: 2px;
     }
 
     .arrow {
-        rotate: 360deg; /* Rotate arrow downwards */
-        font-size: 30px; /* Maintain arrow font size */
-        animation: bounce 2s infinite; /* Keep bounce animation */
+        rotate: 360deg;
+        /* Rotate arrow downwards */
+        font-size: 30px;
+        /* Maintain arrow font size */
+        animation: bounce 2s infinite;
+        /* Keep bounce animation */
         margin-bottom: 3px;
     }
 
     .view-projects-text {
-        font-size: 14px; /* Reduce font size for the view projects text */
-        margin-bottom: 5px; /* Maintain bottom margin */
+        font-size: 14px;
+        /* Reduce font size for the view projects text */
+        margin-bottom: 5px;
+        /* Maintain bottom margin */
     }
 
     .btm-line {
-        flex-direction: row; /* Change layout to column */
-        align-items: center; /* Center items */
-        justify-content: center; /* Center items */
-        width: 100%; /* Full width */
+        flex-direction: row;
+        /* Change layout to column */
+        align-items: center;
+        /* Center items */
+        justify-content: center;
+        /* Center items */
+        width: 100%;
+        /* Full width */
     }
 
-    #tags{
+    #tags {
         font-size: 12px;
     }
 
-
     .email-container {
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        scale: 0.8;
-        position: absolute;
-        top: -620px;
-        left: 50%;
-        transform: translateX(-50%);
+        display: none;
     }
 
-    .email-container input {
-        background-color: #CCC5B9;
-    }
-    
 }
 
 .projects-section {
@@ -358,6 +360,78 @@ body {
     width: 0;
 }
 
+/*Projects Page Responsive*/
+
+@media (max-width: 768px) {
+    .projects-section {
+        font-size: 18px;
+        /* Adjusted font size for mobile */
+        padding: 10px;
+        /* Added padding to the section */
+    }
+
+    .academics-button {
+        right: 46px;
+    }
+
+    .projects-section p {
+        margin-top: 10px;
+        margin-left: 10px;
+        /* Reduced left margin for paragraph */
+    }
+
+    .go-back-button,
+    .academics-button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        /* Smaller button padding */
+        font-size: 12px;
+        /* Smaller font size for buttons */
+        top: 10px;
+        /* Adjusted button position */
+    }
+
+    .projects-showcase {
+        overflow-y: auto;
+        flex-direction: row;
+        /* Stack items vertically on mobile */
+        padding: 0;
+        /* Removed padding for better layout */
+        height: auto;
+        /* Auto height for better fitting */
+        gap: 15px;
+        /* Added gap for spacing between cards */
+        margin: 15px 10px 10px 10px;
+        /* Adjusted margin for better layout */
+    }
+
+    .project-card {
+        width: calc(100vw - 40px);
+        /* Full width with margins */
+        height: 300px;
+        /* Auto height to fit content */
+    }
+
+    .project-card h3,
+    .project-card h5,
+    .view-project-button {
+        font-size: 16px;
+        /* Smaller font size for text */
+    }
+
+    .text-container input {
+        width: 95px;
+        /* Smaller input width */
+        font-size: 12px;
+        /* Smaller font size for input */
+    }
+
+    .text-container button {
+        font-size: 16px;
+        /* Smaller button font size */
+    }
+}
+
 .academics-section {
     width: 100vw;
     background-color: #CCC5B9;
@@ -417,15 +491,18 @@ body {
     content: '';
     position: absolute;
     top: 0;
-    left: 32px; /* 2em converted to px */
+    left: 32px;
+    /* 2em converted to px */
     width: 2px;
-    height: 100%; /* Let it expand based on content */
+    height: 100%;
+    /* Let it expand based on content */
 }
 
 .timeline-event {
     list-style: none;
     position: relative;
-    margin-bottom: 2em; /* Ensures space between events */
+    margin-bottom: 2em;
+    /* Ensures space between events */
 }
 
 .timeline-event:hover .timeline-event-icon {
@@ -434,20 +511,25 @@ body {
 }
 
 .timeline-event:hover .timeline-event-thumbnail {
-    box-shadow: inset 640px 0 0 0 #EB5E28; /* Adjusted based on 40em */
+    box-shadow: inset 640px 0 0 0 #EB5E28;
+    /* Adjusted based on 40em */
 }
 
 .timeline-event-copy {
-    padding: 32px; /* 2em converted to px */
+    padding: 32px;
+    /* 2em converted to px */
     position: relative;
-    top: -30px; /* -1.875em converted to px */
-    left: 30px; /* 4em converted to px */
+    top: -30px;
+    /* -1.875em converted to px */
+    left: 30px;
+    /* 4em converted to px */
     width: 80%;
 }
 
 .timeline-event-copy h3 {
     font-family: poppins;
-    font-size: 28px; /* Reduced font size from 1.75em */
+    font-size: 28px;
+    /* Reduced font size from 1.75em */
     color: #252422;
 }
 
@@ -455,12 +537,15 @@ body {
     font-family: lexend deca;
     font-weight: 300;
     color: #403d39;
-    font-size: 18px; /* Reduced font size from 1.2em */
-    margin-bottom: 18px; /* 1.2em converted to px */
+    font-size: 18px;
+    /* Reduced font size from 1.2em */
+    margin-bottom: 18px;
+    /* 1.2em converted to px */
 }
 
 .timeline-event-copy p:not(.timeline-event-thumbnail) {
-    padding-bottom: 18px; /* 1.2em converted to px */
+    padding-bottom: 18px;
+    /* 1.2em converted to px */
 }
 
 .timeline-event-icon {
@@ -505,7 +590,112 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.linkedin a{
+.linkedin a {
     text-decoration: none;
     color: #FFFCF2;
+}
+
+/*Academics Responsive*/
+
+@media (max-width: 768px) {
+    .academics-section {
+        font-size: 18px;
+        /* Reduced font size for mobile */
+        height: auto;
+        /* Allow height to adjust based on content */
+        padding: 10px;
+        /* Added padding for mobile */
+    }
+
+    .academics-section .acad-back-button {
+        position: relative;
+        /* Change position for better layout */
+        bottom: auto;
+        /* Reset bottom positioning */
+        left: auto;
+        /* Reset left positioning */
+        margin: 10px;
+        /* Add margin for spacing */
+        padding: 5px 10px;
+        /* Smaller button padding */
+        font-size: 12px;
+        /* Smaller font size for buttons */
+    }
+
+    .academics-h {
+        font-size: 24px;
+        /* Smaller header font size for mobile */
+        position: relative;
+        /* Change position for better layout */
+        margin: 10px;
+        /* Add margin for spacing */
+        bottom: auto;
+        /* Reset bottom positioning */
+        right: auto;
+        /* Reset right positioning */
+    }
+
+    .academic-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100vw;
+        height: 85vh;
+        background-color: #FFFCF2;
+        position: relative;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+    }
+
+    .timeline {
+        margin: 2em 20px 0 20px;
+        /* Reduced margin for mobile */
+    }
+
+    .timeline-event-copy {
+        padding: 16px;
+        /* Smaller padding for mobile */
+        top: -10px;
+        left: 0;
+        /* Reset left position for better layout */
+        width: 100%;
+        /* Full width for mobile */
+    }
+
+    .timeline-event-copy h3 {
+        font-size: 18px;
+        /* Smaller font size for mobile */
+    }
+
+    .timeline-event-copy h4 {
+        font-size: 11px;
+        /* Smaller font size for mobile */
+        margin-bottom: 10px;
+        /* Reduced margin for spacing */
+    }
+
+    .timeline-event-icon {
+        width: 14px;
+        /* Smaller icon size for mobile */
+        height: 14px;
+        /* Smaller icon size for mobile */
+    }
+
+    .timeline-event-thumbnail {
+        font-size: 10px;
+        /* Smaller thumbnail font size for mobile */
+        padding: 3px 8px;
+        /* Smaller padding for mobile */
+    }
+
+    .linkedin {
+        display: none;
+    }
+
+    .timeline-event:hover .timeline-event-icon {
+        background-color: #EB5E28;
+        width: 20px;
+    }
+
 }
