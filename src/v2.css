@@ -426,14 +426,14 @@ body {
     }
 
     .text-container input {
-        width: 80px;
+        width: 84px;
         /* Smaller input width */
         font-size: 12px;
         /* Smaller font size for input */
     }
 
     .text-container button {
-        font-size: 14px;
+        font-size: 15px;
         /* Smaller button font size */
     }
 }
@@ -662,7 +662,7 @@ body {
     .timeline-event-copy {
         padding: 16px;
         /* Smaller padding for mobile */
-        top: -10px;
+        top: -7px;
         left: 0;
         /* Reset left position for better layout */
         width: 100%;
